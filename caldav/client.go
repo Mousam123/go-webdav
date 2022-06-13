@@ -277,10 +277,10 @@ func populateCalendarObject(co *CalendarObject, resp *http.Response) error {
 		co.Path = u.Path
 	}
 	if etag := resp.Header.Get("ETag"); etag != "" {
-		etag, err := strconv.Unquote(etag)
-		if err != nil {
-			return err
-		}
+		//etag, err := strconv.Unquote(etag)
+		//if err != nil {
+		//	return err
+		//}
 		co.ETag = etag
 	}
 	if contentLength := resp.Header.Get("Content-Length"); contentLength != "" {
